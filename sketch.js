@@ -48,7 +48,7 @@ function draw() {
   
   background("black");
         
-          //haciendo que el globo aerostatico brinque
+          //haciendo que el globo aerostático brinque
           if(keyDown("space")) {
             balloon.velocityY = -6 ;
             
@@ -62,7 +62,7 @@ function draw() {
    
         drawSprites();
        
-        //generando los obstaculos superiores
+        //generando los obstáculos superiores
       spawnObstaclesTop();
 
       
@@ -79,10 +79,10 @@ function spawnObstaclesTop()
     obstacleTop.scale = 0.1;
     obstacleTop.velocityX = -4;
 
-    //posiciones "y" aleatorias para los obstaculos superiores
+    //posiciones "y" aleatorias para los obstáculos superiores
     obstacleTop.y = Math.round(random(10,100));
 
-    //generar obstaculos superiores de forma aleatoria 
+    //generar obstáculos superiores de forma aleatoria 
     var rand = Math.round(random(1,2));
     switch(rand) {
       case 1: obstacleTop.addImage(obsTop1);
