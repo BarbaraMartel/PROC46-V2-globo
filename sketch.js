@@ -10,13 +10,6 @@ bgImg = loadImage("assets/bg.png")
 
 balloonImg = loadAnimation("assets/balloon1.png","assets/balloon2.png","assets/balloon3.png")
 
-obsTop1 = loadImage("assets/obsTop1.png")
-obsTop2 = loadImage("assets/obsTop2.png")
-
-obsBottom1 = loadImage("assets/obsBottom1.png")
-obsBottom2 = loadImage("assets/obsBottom2.png")
-obsBottom3 = loadImage("assets/obsBottom3.png")
-
 }
 
 function setup(){
@@ -75,41 +68,24 @@ function spawnObstaclesTop()
         obstacleTop = createSprite(400,50,40,50);
     
     //obstacleTop.addImage(obsTop1);
-    
-    obstacleTop.scale = 0.1;
-    obstacleTop.velocityX = -4;
 
     //posiciones "y" aleatorias para los obstáculos superiores
-    obstacleTop.y = Math.round(random(10,100));
+    
 
     //generar obstáculos superiores de forma aleatoria 
-    var rand = Math.round(random(1,2));
-    switch(rand) {
-      case 1: obstacleTop.addImage(obsTop1);
-              break;
-      case 2: obstacleTop.addImage(obsTop2);
-              break;
-      default: break;
-    }
+
 
      //asignando lifetime (tiempo de vida) a la variable
-   obstacleTop.lifetime = 100;
-    
-   balloon.depth = balloon.depth + 1;
+   
+   //profundidad 
+  
    
       }
 }
 
  function Bar() 
  {
-         if(World.frameCount % 60 === 0)
-         {
-           var bar = createSprite(400,200,10,800);
-          bar.velocityX = -6
-          bar.depth = balloon.depth;
-          bar.lifetime = 70;
-          bar.visible = false;
-         }
+
 }
 
 
